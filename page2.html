@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Night - The Plot Thickens</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎉 The Party Continues... 🎉</h1>
+            <p class="subtitle">Chapter 2: The Plot Thickens</p>
+        </header>
+
+        <main class="story-container">
+            <div class="story-card active" id="scene1">
+                <h2>The party is heating up...</h2>
+                <p>As the night progresses, the energy in the room has shifted. You notice people gathering in small groups, whispering excitedly. Someone mentions there's going to be a surprise announcement. The music changes to something more intimate. You also spot a game table being set up and someone organizing a scavenger hunt.</p>
+                
+                <div class="choices">
+                    <button class="choice-btn" onclick="makeChoice('investigate')">
+                        🔍 Try to find out what's happening
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('enjoy')">
+                        🎵 Just enjoy the moment
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('kitchen')">
+                        🍕 Head to the kitchen for snacks
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('games')">
+                        🎲 Check out the game table
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('scavenger-hunt')">
+                        🔍 Join the scavenger hunt
+                    </button>
+                </div>
+            </div>
+
+            <div class="story-card" id="scene2">
+                <h2>You start investigating...</h2>
+                <p>You casually move through the crowd, listening to snippets of conversation. "Did you hear about the contest?" "I can't believe they're actually doing this!" "The winner gets something amazing!" Your curiosity is definitely piqued.</p>
+                
+                <div class="choices">
+                    <button class="choice-btn" onclick="makeChoice('ask-directly')">
+                        ❓ Ask someone directly what's going on
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('keep-listening')">
+                        👂 Keep eavesdropping for more info
+                    </button>
+                </div>
+            </div>
+
+            <div class="story-card" id="scene3">
+                <h2>You decide to just enjoy...</h2>
+                <p>You find a comfortable spot and take in the atmosphere. The party has a magical quality tonight. Someone offers you a mysterious drink that glows slightly. "It's the house special," they say with a wink.</p>
+                
+                <div class="choices">
+                    <button class="choice-btn" onclick="makeChoice('try-drink')">
+                        ✨ Try the glowing drink
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('decline-drink')">
+                        🚫 Politely decline
+                    </button>
+                </div>
+            </div>
+
+            <div class="story-card" id="scene4">
+                <h2>Kitchen adventures...</h2>
+                <p>The kitchen is surprisingly quiet compared to the main party. You find some amazing homemade treats and notice a door slightly ajar that leads to what looks like a garden. Soft music and laughter drift through.</p>
+                
+                <div class="choices">
+                    <button class="choice-btn" onclick="makeChoice('garden')">
+                        🌸 Check out the garden
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('stay-kitchen')">
+                        🍰 Stay and enjoy the treats
+                    </button>
+                </div>
+            </div>
+
+            <div class="story-card" id="scene5">
+                <h2>The big reveal!</h2>
+                <p>Suddenly, the music stops and the host, Alex, steps onto a makeshift stage. "Everyone, thank you for coming to our special party! Tonight, we're announcing our annual 'Best Party Guest' contest. The winner gets an all-expenses-paid trip to our next exclusive event!"</p>
+                
+                <div class="choices">
+                    <button class="choice-btn" onclick="makeChoice('participate')">
+                        🏆 Enter the contest!
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('observe')">
+                        👀 Just watch and see what happens
+                    </button>
+                </div>
+            </div>
+
+            <div class="story-card" id="scene6">
+                <h2>The contest begins...</h2>
+                <p>"The contest is simple," Alex continues. "Show us your best party trick, tell your funniest story, or do something that makes everyone laugh. The crowd will vote by applause!"</p>
+                
+                <div class="choices">
+                    <button class="choice-btn" onclick="makeChoice('dance-move')">
+                        💃 Show off your best dance move
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('joke')">
+                        😄 Tell your funniest joke
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('impression')">
+                        🎭 Do a celebrity impression
+                    </button>
+                </div>
+            </div>
+
+            <div class="story-card" id="scene7">
+                <h2>Game table excitement!</h2>
+                <p>The game table has several options: a trivia game, a card game, and a board game. A group is already playing and they're having a blast. "Want to join us?" asks the game host. "We're about to start a new round!"</p>
+                
+                <div class="choices">
+                    <button class="choice-btn" onclick="makeChoice('trivia')">
+                        🧠 Join the trivia game
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('cards')">
+                        🃏 Play the card game
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('board-game')">
+                        🎯 Try the board game
+                    </button>
+                </div>
+            </div>
+
+            <div class="story-card" id="scene8">
+                <h2>Scavenger hunt adventure!</h2>
+                <p>The scavenger hunt organizer hands you a list of items to find around the party. "Find these items and you could win a special prize!" The list includes things like "a red shoe," "someone's phone number," and "a piece of confetti."</p>
+                
+                <div class="choices">
+                    <button class="choice-btn" onclick="makeChoice('solo-hunt')">
+                        🕵️ Go solo on the hunt
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('team-hunt')">
+                        👥 Form a team for the hunt
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('skip-hunt')">
+                        🚫 "Maybe I'll watch instead"
+                    </button>
+                </div>
+            </div>
+
+            <div class="story-card" id="finale">
+                <h2>What a night!</h2>
+                <p>The contest was amazing! Whether you won or not, you've had an incredible time at this party. The connections you've made, the memories you've created, and the stories you'll tell - this is what makes a party truly special.</p>
+                
+                <div class="choices">
+                    <button class="choice-btn continue-btn" onclick="goBackToStart()">
+                        🔄 Start the story over
+                    </button>
+                    <button class="choice-btn continue-btn" onclick="goToPage3()">
+                        🎭 Explore another path
+                    </button>
+                    <button class="choice-btn" onclick="shareStory()">
+                        📱 Share your party story
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Your choices have shaped this amazing party experience!</p>
+        </footer>
+    </div>
+
+    <script>
+        function makeChoice(choice) {
+            console.log('Choice made:', choice); // Debug log
+            
+            // Hide all story cards
+            const cards = document.querySelectorAll('.story-card');
+            cards.forEach(card => {
+                card.classList.remove('active');
+                card.style.pointerEvents = 'none';
+            });
+            
+            // Show appropriate next scene based on choice
+            let nextScene;
+            switch(choice) {
+                case 'investigate':
+                    nextScene = 'scene2';
+                    break;
+                case 'enjoy':
+                    nextScene = 'scene3';
+                    break;
+                case 'kitchen':
+                    nextScene = 'scene4';
+                    break;
+                case 'games':
+                    nextScene = 'scene7';
+                    break;
+                case 'scavenger-hunt':
+                    nextScene = 'scene8';
+                    break;
+                case 'ask-directly':
+                case 'keep-listening':
+                case 'try-drink':
+                case 'decline-drink':
+                case 'garden':
+                case 'stay-kitchen':
+                case 'trivia':
+                case 'cards':
+                case 'board-game':
+                case 'solo-hunt':
+                case 'team-hunt':
+                case 'skip-hunt':
+                    nextScene = 'scene5';
+                    break;
+                case 'participate':
+                    nextScene = 'scene6';
+                    break;
+                case 'observe':
+                case 'dance-move':
+                case 'joke':
+                case 'impression':
+                    nextScene = 'finale';
+                    break;
+                default:
+                    console.log('Unknown choice:', choice);
+                    nextScene = 'finale';
+                    break;
+            }
+            
+            // Show next scene with animation
+            setTimeout(() => {
+                const targetScene = document.getElementById(nextScene);
+                if (targetScene) {
+                    targetScene.classList.add('active');
+                    targetScene.style.pointerEvents = 'auto';
+                } else {
+                    console.error('Scene not found:', nextScene);
+                }
+            }, 300);
+        }
+
+        function goBackToStart() {
+            window.location.href = 'index.html';
+        }
+
+        function goToPage3() {
+            window.location.href = 'page3.html';
+        }
+
+        function shareStory() {
+            alert('Thanks for playing! Share this interactive party story with your friends! 🎉');
+        }
+
+        // Add some party atmosphere with random confetti
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = Math.random() * 100 + '%';
+            confetti.style.animationDelay = Math.random() * 2 + 's';
+            document.body.appendChild(confetti);
+            
+            setTimeout(() => {
+                confetti.remove();
+            }, 3000);
+        }
+
+        // Create confetti periodically
+        setInterval(createConfetti, 2000);
+    </script>
+</body>
+</html>

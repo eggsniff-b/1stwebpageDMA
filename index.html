@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Night - Interactive Story</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎉 The Party Night 🎉</h1>
+            <p class="subtitle">An Interactive Story</p>
+        </header>
+
+        <main class="story-container">
+            <div class="story-card active" id="scene1">
+                <h2>You arrive at the party...</h2>
+                <p>The music is pumping, lights are flashing, and you can see people dancing in the living room. Your friend Sarah waves at you from across the room, but you also notice an intriguing stranger by the kitchen door. There's also a photo booth in the corner and someone setting up karaoke.</p>
+                
+                <div class="choices">
+                    <button class="choice-btn" onclick="makeChoice('sarah')">
+                        👋 Go say hi to Sarah
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('stranger')">
+                        😏 Approach the mysterious stranger
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('dance')">
+                        💃 Hit the dance floor first
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('photo-booth')">
+                        📸 Check out the photo booth
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('karaoke')">
+                        🎤 Sign up for karaoke
+                    </button>
+                </div>
+            </div>
+
+            <div class="story-card" id="scene2">
+                <h2>You head over to Sarah...</h2>
+                <p>"Hey! I'm so glad you made it!" Sarah shouts over the music. "Have you met Alex yet? They're the one who organized this whole thing." She points to someone across the room. "But first, want a drink?"</p>
+                
+                <div class="choices">
+                    <button class="choice-btn" onclick="makeChoice('meet-alex')">
+                        🤝 Let's meet Alex first
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('get-drink')">
+                        🍹 Yes, I need a drink!
+                    </button>
+                </div>
+            </div>
+
+            <div class="story-card" id="scene3">
+                <h2>The mysterious stranger...</h2>
+                <p>As you approach, the stranger turns around with a knowing smile. "I was wondering when you'd come over," they say. "I'm Jordan. I've been watching you since you walked in." The music seems to fade as you lock eyes.</p>
+                
+                <div class="choices">
+                    <button class="choice-btn" onclick="makeChoice('flirt')">
+                        😘 "I've been watching you too..."
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('playful')">
+                        😄 "That's a bit creepy, but I like it"
+                    </button>
+                </div>
+            </div>
+
+            <div class="story-card" id="scene4">
+                <h2>Dance floor time!</h2>
+                <p>You jump right into the crowd, feeling the beat. Someone bumps into you and apologizes - it's a cute person with amazing dance moves. "Sorry! Want to dance together?" they ask with a grin.</p>
+                
+                <div class="choices">
+                    <button class="choice-btn" onclick="makeChoice('dance-together')">
+                        💃 "Absolutely!"
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('dance-solo')">
+                        🕺 "I'm good, thanks!"
+                    </button>
+                </div>
+            </div>
+
+            <div class="story-card" id="scene5">
+                <h2>Photo booth fun!</h2>
+                <p>The photo booth is decked out with fun props - silly hats, fake mustaches, and colorful wigs. A group of people just finished their session and are laughing at their photos. "Want to join us for the next round?" one of them asks.</p>
+                
+                <div class="choices">
+                    <button class="choice-btn" onclick="makeChoice('join-photos')">
+                        📸 "Yes, let's take some fun photos!"
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('solo-photos')">
+                        🤳 "I'll take some solo shots first"
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('skip-photos')">
+                        👋 "Maybe later, thanks!"
+                    </button>
+                </div>
+            </div>
+
+            <div class="story-card" id="scene6">
+                <h2>Karaoke time!</h2>
+                <p>The karaoke setup looks professional with a great sound system. Someone is currently singing a power ballad, and the crowd is loving it. The host hands you a songbook. "What's your go-to karaoke song?" they ask with a smile.</p>
+                
+                <div class="choices">
+                    <button class="choice-btn" onclick="makeChoice('power-ballad')">
+                        🎤 "I love a good power ballad!"
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('upbeat-song')">
+                        🎵 "Something upbeat and fun!"
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('duet')">
+                        👫 "Anyone want to do a duet?"
+                    </button>
+                </div>
+            </div>
+
+            <div class="story-card" id="finale">
+                <h2>What happens next?</h2>
+                <p>Your choice has led you to an interesting moment at the party. The night is still young, and there are more adventures waiting...</p>
+                
+                <div class="choices">
+                    <button class="choice-btn continue-btn" onclick="goToPage2()">
+                        🌟 Continue the story...
+                    </button>
+                    <button class="choice-btn continue-btn" onclick="goToPage3()">
+                        🎭 Or explore a different path...
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Click the buttons to make your choices and shape the story!</p>
+        </footer>
+    </div>
+
+    <script>
+        function makeChoice(choice) {
+            console.log('Choice made:', choice); // Debug log
+            
+            // Hide all story cards
+            const cards = document.querySelectorAll('.story-card');
+            cards.forEach(card => {
+                card.classList.remove('active');
+                card.style.pointerEvents = 'none';
+            });
+            
+            // Show appropriate next scene based on choice
+            let nextScene;
+            switch(choice) {
+                case 'sarah':
+                    nextScene = 'scene2';
+                    break;
+                case 'stranger':
+                    nextScene = 'scene3';
+                    break;
+                case 'dance':
+                    nextScene = 'scene4';
+                    break;
+                case 'photo-booth':
+                    nextScene = 'scene5';
+                    break;
+                case 'karaoke':
+                    nextScene = 'scene6';
+                    break;
+                case 'meet-alex':
+                case 'get-drink':
+                case 'flirt':
+                case 'playful':
+                case 'dance-together':
+                case 'dance-solo':
+                case 'join-photos':
+                case 'solo-photos':
+                case 'skip-photos':
+                case 'power-ballad':
+                case 'upbeat-song':
+                case 'duet':
+                    nextScene = 'finale';
+                    break;
+                default:
+                    console.log('Unknown choice:', choice);
+                    nextScene = 'finale';
+                    break;
+            }
+            
+            // Show next scene with animation
+            setTimeout(() => {
+                const targetScene = document.getElementById(nextScene);
+                if (targetScene) {
+                    targetScene.classList.add('active');
+                    targetScene.style.pointerEvents = 'auto';
+                } else {
+                    console.error('Scene not found:', nextScene);
+                }
+            }, 300);
+        }
+
+        function goToPage2() {
+            window.location.href = 'page2.html';
+        }
+
+        function goToPage3() {
+            window.location.href = 'page3.html';
+        }
+
+        // Add some party atmosphere with random confetti
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = Math.random() * 100 + '%';
+            confetti.style.animationDelay = Math.random() * 2 + 's';
+            document.body.appendChild(confetti);
+            
+            setTimeout(() => {
+                confetti.remove();
+            }, 3000);
+        }
+
+        // Create confetti periodically
+        setInterval(createConfetti, 2000);
+    </script>
+</body>
+</html>

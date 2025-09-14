@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Night - The Grand Finale</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎉 The Grand Finale 🎉</h1>
+            <p class="subtitle">Chapter 3: Multiple Endings Await</p>
+        </header>
+
+        <main class="story-container">
+            <div class="story-card active" id="scene1">
+                <h2>The party takes an unexpected turn...</h2>
+                <p>As midnight approaches, something magical happens. The lights dim, and a spotlight appears in the center of the room. The host announces, "It's time for our special midnight surprise!" You notice three different areas of the party that seem to be calling to you.</p>
+                
+                <div class="choices">
+                    <button class="choice-btn" onclick="makeChoice('mystery-room')">
+                        🚪 Follow the crowd to the mystery room
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('rooftop')">
+                        🌟 Sneak up to the rooftop
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('secret-garden')">
+                        🌸 Discover the secret garden
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('stay-main')">
+                        🎵 Stay in the main party area
+                    </button>
+                </div>
+            </div>
+
+            <div class="story-card" id="scene2">
+                <h2>The mystery room reveals its secrets...</h2>
+                <p>You enter a dimly lit room filled with vintage furniture and mysterious artifacts. A fortune teller sits at a crystal ball, and there's a table with tarot cards. "I've been waiting for you," she says with a knowing smile. "The cards have much to tell about your future."</p>
+                
+                <div class="choices">
+                    <button class="choice-btn" onclick="makeChoice('tarot-reading')">
+                        🔮 Get a tarot card reading
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('crystal-ball')">
+                        💎 Look into the crystal ball
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('explore-artifacts')">
+                        🏺 Explore the mysterious artifacts
+                    </button>
+                </div>
+            </div>
+
+            <div class="story-card" id="scene3">
+                <h2>The rooftop offers a breathtaking view...</h2>
+                <p>You find yourself on a beautifully decorated rooftop with fairy lights and comfortable seating. The city lights twinkle below, and you're not alone - someone is already there, looking at the stars. "Beautiful night, isn't it?" they say without turning around.</p>
+                
+                <div class="choices">
+                    <button class="choice-btn" onclick="makeChoice('join-stargazing')">
+                        ⭐ Join them in stargazing
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('dance-rooftop')">
+                        💃 Suggest dancing under the stars
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('deep-conversation')">
+                        💭 Start a deep conversation
+                    </button>
+                </div>
+            </div>
+
+            <div class="story-card" id="scene4">
+                <h2>The secret garden is enchanting...</h2>
+                <p>You discover a hidden garden filled with exotic plants, soft lighting, and the sound of a gentle fountain. There's a small stage where someone is playing a guitar softly. A few people are sitting in comfortable chairs, listening to the music.</p>
+                
+                <div class="choices">
+                    <button class="choice-btn" onclick="makeChoice('join-music')">
+                        🎸 Join the musical gathering
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('meditation')">
+                        🧘 Find a quiet spot to meditate
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('garden-exploration')">
+                        🌿 Explore the garden's hidden corners
+                    </button>
+                </div>
+            </div>
+
+            <div class="story-card" id="scene5">
+                <h2>The main party area is buzzing...</h2>
+                <p>You decide to stay where the action is. The DJ announces a special "last dance" competition, and people are forming dance circles. There's also a memory wall where people are writing their favorite moments of the night.</p>
+                
+                <div class="choices">
+                    <button class="choice-btn" onclick="makeChoice('dance-competition')">
+                        🏆 Enter the last dance competition
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('memory-wall')">
+                        📝 Add to the memory wall
+                    </button>
+                    <button class="choice-btn" onclick="makeChoice('group-photo')">
+                        📸 Organize a group photo
+                    </button>
+                </div>
+            </div>
+
+            <!-- Multiple Ending Scenarios -->
+            <div class="story-card" id="ending1">
+                <h2>🌟 The Mystical Ending 🌟</h2>
+                <p>Your journey through the mystery room has revealed profound insights about yourself. The fortune teller's words resonate deeply, and you feel a new sense of purpose. As you leave the party, you carry with you not just memories, but a vision of your future path.</p>
+                
+                <div class="choices">
+                    <button class="choice-btn continue-btn" onclick="goBackToStart()">
+                        🔄 Start a new adventure
+                    </button>
+                    <button class="choice-btn" onclick="shareEnding('mystical')">
+                        📱 Share this mystical ending
+                    </button>
+                </div>
+            </div>
+
+            <div class="story-card" id="ending2">
+                <h2>💫 The Romantic Ending 💫</h2>
+                <p>Your rooftop encounter has led to something beautiful. Under the starlit sky, you've found a connection that feels like destiny. The party fades into the background as you realize this night has changed everything. Sometimes the best adventures lead to the most unexpected discoveries.</p>
+                
+                <div class="choices">
+                    <button class="choice-btn continue-btn" onclick="goBackToStart()">
+                        🔄 Start a new adventure
+                    </button>
+                    <button class="choice-btn" onclick="shareEnding('romantic')">
+                        📱 Share this romantic ending
+                    </button>
+                </div>
+            </div>
+
+            <div class="story-card" id="ending3">
+                <h2>🎵 The Musical Ending 🎵</h2>
+                <p>The secret garden has become your sanctuary. Through music and meditation, you've found inner peace and made connections with kindred spirits. The gentle sounds of the guitar and the peaceful atmosphere have given you a new appreciation for life's simple pleasures.</p>
+                
+                <div class="choices">
+                    <button class="choice-btn continue-btn" onclick="goBackToStart()">
+                        🔄 Start a new adventure
+                    </button>
+                    <button class="choice-btn" onclick="shareEnding('musical')">
+                        📱 Share this musical ending
+                    </button>
+                </div>
+            </div>
+
+            <div class="story-card" id="ending4">
+                <h2>🏆 The Champion Ending 🏆</h2>
+                <p>You've become the life of the party! Whether through dance, memories, or bringing people together, you've left an indelible mark on this night. Everyone will remember your energy and spirit. You've proven that sometimes the best way to enjoy a party is to be the one making it unforgettable.</p>
+                
+                <div class="choices">
+                    <button class="choice-btn continue-btn" onclick="goBackToStart()">
+                        🔄 Start a new adventure
+                    </button>
+                    <button class="choice-btn" onclick="shareEnding('champion')">
+                        📱 Share this champion ending
+                    </button>
+                </div>
+            </div>
+
+            <div class="story-card" id="ending5">
+                <h2>🎭 The Unexpected Ending 🎭</h2>
+                <p>Sometimes the most memorable nights are the ones that don't go as planned. Your choices have led you down a path you never expected, but it's been absolutely perfect. The party has taught you that life's greatest adventures often come from embracing the unexpected.</p>
+                
+                <div class="choices">
+                    <button class="choice-btn continue-btn" onclick="goBackToStart()">
+                        🔄 Start a new adventure
+                    </button>
+                    <button class="choice-btn" onclick="shareEnding('unexpected')">
+                        📱 Share this unexpected ending
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Your choices have led to a unique ending. Every path tells a different story!</p>
+        </footer>
+    </div>
+
+    <script>
+        function makeChoice(choice) {
+            console.log('Choice made:', choice); // Debug log
+            
+            // Hide all story cards
+            const cards = document.querySelectorAll('.story-card');
+            cards.forEach(card => {
+                card.classList.remove('active');
+                card.style.pointerEvents = 'none';
+            });
+            
+            // Show appropriate next scene based on choice
+            let nextScene;
+            switch(choice) {
+                case 'mystery-room':
+                    nextScene = 'scene2';
+                    break;
+                case 'rooftop':
+                    nextScene = 'scene3';
+                    break;
+                case 'secret-garden':
+                    nextScene = 'scene4';
+                    break;
+                case 'stay-main':
+                    nextScene = 'scene5';
+                    break;
+                case 'tarot-reading':
+                case 'crystal-ball':
+                case 'explore-artifacts':
+                    nextScene = 'ending1';
+                    break;
+                case 'join-stargazing':
+                case 'dance-rooftop':
+                case 'deep-conversation':
+                    nextScene = 'ending2';
+                    break;
+                case 'join-music':
+                case 'meditation':
+                case 'garden-exploration':
+                    nextScene = 'ending3';
+                    break;
+                case 'dance-competition':
+                case 'memory-wall':
+                case 'group-photo':
+                    nextScene = 'ending4';
+                    break;
+                default:
+                    console.log('Unknown choice:', choice);
+                    nextScene = 'ending5';
+                    break;
+            }
+            
+            // Show next scene with animation
+            setTimeout(() => {
+                const targetScene = document.getElementById(nextScene);
+                if (targetScene) {
+                    targetScene.classList.add('active');
+                    targetScene.style.pointerEvents = 'auto';
+                } else {
+                    console.error('Scene not found:', nextScene);
+                }
+            }, 300);
+        }
+
+        function goBackToStart() {
+            window.location.href = 'index.html';
+        }
+
+        function shareEnding(endingType) {
+            const messages = {
+                'mystical': 'I just had the most mystical party experience! 🔮✨',
+                'romantic': 'Found something magical under the stars tonight! 💫💕',
+                'musical': 'Discovered inner peace through music and nature! 🎵🌿',
+                'champion': 'Became the life of the party! 🏆🎉',
+                'unexpected': 'Had the most unexpectedly perfect night! 🎭✨'
+            };
+            
+            alert(messages[endingType] + '\n\nThanks for playing the interactive party story! 🎉');
+        }
+
+        // Add some party atmosphere with random confetti
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = Math.random() * 100 + '%';
+            confetti.style.animationDelay = Math.random() * 2 + 's';
+            document.body.appendChild(confetti);
+            
+            setTimeout(() => {
+                confetti.remove();
+            }, 3000);
+        }
+
+        // Create confetti periodically
+        setInterval(createConfetti, 2000);
+    </script>
+</body>
+</html>
